@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url('forest.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#tiger {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    background: orange;
+    /* Ganti dengan gambar macan jika sudah ada */
+    background: url('tiger.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    /* Ini opsional, untuk membuat objek tampak bulat */
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 100px;
+    background: url('tree.png') no-repeat center center / contain;
+}
+
+
+#tree1 {
+    right: 0;
+}
+
+#tree2 {
+    right: -200px;
+    /* Posisi awal obstacle kedua lebih jauh */
+}
+
+#score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.obstacle {
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    /* Menurunkan tinggi rintangan agar bisa dilompati */
+    background: green;
+    border-radius: 10px;
+}
+
+#gameOverMessage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#gameOverMessage h1 {
+    margin-bottom: 20px;
+}
+
+#restartButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#restartButton:hover {
+    background-color: #0056b3;
+}
+
+#score,
+#highScore {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+#score {
+    left: 10px;
+}
+
+#highScore {
+    right: 10px;
+}
